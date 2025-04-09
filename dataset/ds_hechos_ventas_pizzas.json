@@ -1,0 +1,48 @@
+{
+	"name": "ds_hechos_ventas_pizzas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_dw_ventas",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_order_details",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_order",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_pizza",
+				"type": "varchar"
+			},
+			{
+				"name": "fecha",
+				"type": "date"
+			},
+			{
+				"name": "hora",
+				"type": "time",
+				"scale": 7
+			},
+			{
+				"name": "quantity",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "hechos_ventas_pizzas"
+		}
+	}
+}

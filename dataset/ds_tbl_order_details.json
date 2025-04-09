@@ -1,0 +1,39 @@
+{
+	"name": "ds_tbl_order_details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_db_ventas",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DB"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_order_details",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_order",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "id_pizza",
+				"type": "varchar"
+			},
+			{
+				"name": "quantity",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_Order_details"
+		}
+	}
+}

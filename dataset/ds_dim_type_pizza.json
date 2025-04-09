@@ -1,0 +1,32 @@
+{
+	"name": "ds_dim_type_pizza",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_dw_ventas",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DW"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id_type_pizza",
+				"type": "varchar"
+			},
+			{
+				"name": "nombre_pizza",
+				"type": "varchar"
+			},
+			{
+				"name": "categoria",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_type_pizza"
+		}
+	}
+}
